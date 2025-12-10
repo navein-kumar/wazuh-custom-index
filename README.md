@@ -23,6 +23,8 @@ Route specific Wazuh alerts to separate custom indices (e.g., `wazuh-mssql-*`, `
 ### 1.1 Export Current Template
 
 ```bash
+wget https://raw.githubusercontent.com/wazuh/wazuh/v4.14.1/extensions/elasticsearch/7.x/wazuh-template.json
+or 
 curl -XGET -k -u admin:<password> "https://<INDEXER_IP>:9200/_template/wazuh?pretty" > /tmp/wazuh-template.json
 ```
 
